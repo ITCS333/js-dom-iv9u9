@@ -2,9 +2,9 @@
  * Selects the element with the id 'main-heading' and changes its text content to 'DOM Manipulation Challenge'.
  */
 function changeHeadingText() {
-  document.getElementById('main-heading').innerText = 'DOM Manipulation Challenge';
+  const heading = document.getElementById('main-heading');
+  heading.textContent = 'DOM Manipulation Challenge';
 }
-
 /**
  * Selects the element with the id 'box-to-modify' and changes its background color to 'lightblue'.
  */
@@ -19,10 +19,9 @@ function changeBoxColor() {
  * Creates a new <li> element, sets its text content to 'New Item', and appends it to the <ul> with the id 'item-list'.
  */
 function addNewItem() {
-  const ul = document.getElementById('item-list');
   const li = document.createElement('li');
-  li.innerText = 'New Item';
-  ul.appendChild(li);
+  li.textContent = 'New Item';
+  document.getElementById('item-list').appendChild(li);
 }
 
 /**
