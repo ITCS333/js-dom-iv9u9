@@ -4,7 +4,7 @@
 function changeHeadingText() {
   const heading = document.getElementById('main-haeding');
   if(heading){
-    heading.textContent = 'DOM Manipulation Challenge'
+    heading.textContent = 'DOM Manipulation Challenge';
   }
 }
 
@@ -23,8 +23,9 @@ function changeBoxColor() {
  */
 function addNewItem() {
   const list = document.getElementById('item-list');
-  newIteam.textContent = 'New Item';
-  list.appendChild(newIteam);
+  const li = document.createElement('li');
+  li.innerText = 'New Item';
+  list.appendChild(li);
 }
 
 /**
@@ -41,9 +42,9 @@ function highlightParagraph() {
  * Selects the element with the id 'to-be-removed' and removes it from the DOM.
  */
 function removeElement() {
-  const element = document.GetElemetById('to-be-removed');
-  if(element){
-    element.remove();
+  const el = document.getElementById('to-be-removed');
+  if (el && el.parentNode) {
+    el.parentNode.removeChild(el);
   }
 }
 
